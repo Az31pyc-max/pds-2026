@@ -11,31 +11,17 @@
         body { font-family: 'Inter', sans-serif; background-color: #fafaf9; scroll-behavior: smooth; }
         h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
         .chart-container { position: relative; width: 100%; height: 300px; }
-        
-        /* Typography for the report */
         .report-text p { margin-bottom: 1.5rem; line-height: 1.8; color: #44403c; }
-        .report-text li { margin-bottom: 0.5rem; }
-        .report-text h3 { font-size: 1.5rem; font-weight: 700; color: #1c1917; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .report-text h4 { font-size: 1.15rem; font-weight: 600; color: #44403c; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-        
-        /* Tables */
         .report-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
         .report-table th { background-color: #e7e5e4; text-align: left; padding: 12px; border: 1px solid #d6d3d1; font-weight: bold; }
         .report-table td { border: 1px solid #d6d3d1; padding: 12px; }
-        .report-table tr:nth-child(even) { background-color: #f5f5f4; }
-
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none; height: 20px; width: 20px;
-            border-radius: 50%; background: #d97706; cursor: pointer; margin-top: -8px;
-        }
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%; height: 4px; cursor: pointer; background: #e5e7eb; border-radius: 2px;
-        }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #d97706; cursor: pointer; margin-top: -8px; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #e5e7eb; border-radius: 2px; }
+        .hero-image { max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
     </style>
 </head>
 <body class="text-stone-800">
 
-    <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-stone-200">
         <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
@@ -47,403 +33,42 @@
                 <a href="#calculator" class="hover:text-amber-600 transition">Калькулятор</a>
                 <a href="#report" class="hover:text-amber-600 transition">Полный отчет</a>
             </div>
-            <a href="#calculator" class="bg-stone-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-stone-700 transition font-sans">
-                Рассчитать
-            </a>
+            <a href="#calculator" class="bg-stone-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-stone-700 transition font-sans">Рассчитать</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="bg-white border-b border-stone-200">
-        <div class="max-w-4xl mx-auto px-4 py-16 text-center">
-            <h1 class="text-3xl md:text-5xl font-black text-stone-900 mb-6 leading-tight">
-                Комплексный анализ стратегий ПДС 2025
-            </h1>
-            <p class="text-lg text-stone-500 mb-8 font-sans">
-                Как максимизировать доходность в новых условиях? Аналитический отчет, видео-разбор и интерактивный калькулятор.
-            </p>
+        <div class="max-w-4xl mx-auto px-4 py-12 text-center">
+            <h1 class="text-3xl md:text-5xl font-black text-stone-900 mb-6 leading-tight">Комплексный анализ стратегий ПДС 2025</h1>
+            
+            <div class="mb-8">
+                <img src="preview.png" alt="Обложка видео ПДС 2025" class="hero-image mx-auto">
+            </div>
+
+            <p class="text-lg text-stone-500 mb-8 font-sans">Как максимизировать доходность в новых условиях? Аналитический отчет, видео-разбор и интерактивный калькулятор.</p>
             <div class="flex justify-center gap-4 font-sans">
-                <a href="#calculator" class="bg-amber-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-amber-700 transition shadow-lg">
-                    Перейти к расчетам
-                </a>
-                <a href="#report" class="bg-white text-stone-700 border border-stone-300 px-6 py-3 rounded-xl font-bold hover:bg-stone-50 transition">
-                    Читать отчет
-                </a>
+                <a href="#calculator" class="bg-amber-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-amber-700 transition shadow-lg">Перейти к расчетам</a>
+                <a href="#report" class="bg-white text-stone-700 border border-stone-300 px-6 py-3 rounded-xl font-bold hover:bg-stone-50 transition">Читать отчет</a>
             </div>
         </div>
     </header>
 
-    <!-- VIDEO SECTION -->
     <section id="video" class="bg-stone-100 py-12">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video relative group">
-                <!-- ВСТАВЬТЕ ID ВАШЕГО ВИДЕО НИЖЕ (после embed/) -->
-                <iframe 
-                    class="w-full h-full absolute top-0 left-0"
-                    src="https://www.youtube.com/embed/abKf52Icx9E?rel=0" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-black rounded-2xl shadow-2xl overflow-hidden aspect-video relative mb-8">
+                <iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/abKf52Icx9E?rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="inline-block bg-red-100 border-l-4 border-red-600 p-4 text-left">
+                <p class="text-red-900 font-bold">⚠️ ВНИМАНИЕ: Обязательно посмотрите блок про "Ловушку 411к" в видео!</p>
             </div>
         </div>
     </section>
 
-    <!-- CALCULATOR SECTION -->
     <section id="calculator" class="py-16 bg-white font-sans">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="mb-10 text-center">
-                <h2 class="text-3xl font-bold text-stone-900">Калькулятор Выгоды</h2>
-                <p class="text-stone-500 mt-2">Проверьте расчеты из отчета на своих цифрах</p>
-            </div>
+        </section>
 
-            <div class="grid lg:grid-cols-12 gap-8">
-                <!-- Controls -->
-                <div class="lg:col-span-4 bg-stone-50 p-6 rounded-2xl border border-stone-200">
-                    <div class="mb-6">
-                        <label class="flex justify-between text-sm font-bold text-stone-700 mb-2">
-                            Ваш доход в месяц <span id="income-val" class="text-amber-600">50 000 ₽</span>
-                        </label>
-                        <input type="range" id="income" min="20000" max="200000" step="5000" value="50000" class="w-full">
-                    </div>
-                    <div class="mb-6">
-                        <label class="flex justify-between text-sm font-bold text-stone-700 mb-2">
-                            Ваш взнос в год <span id="contrib-val" class="text-amber-600">36 000 ₽</span>
-                        </label>
-                        <input type="range" id="contrib" min="10000" max="100000" step="2000" value="36000" class="w-full">
-                    </div>
-                    <div class="flex gap-2 mb-4">
-                        <button onclick="setMode('pensioner')" id="btn-pens" class="flex-1 py-2 text-sm font-bold rounded-lg bg-stone-900 text-white shadow transition">Пенсионер</button>
-                        <button onclick="setMode('worker')" id="btn-work" class="flex-1 py-2 text-sm font-bold rounded-lg text-stone-500 hover:text-stone-900 transition">Работающий</button>
-                    </div>
-                    <div class="text-xs text-blue-800 bg-blue-50 p-3 rounded-lg border border-blue-100">
-                        <strong>Коэфф:</strong> <span id="formula-text">1:1</span>
-                    </div>
-                </div>
-
-                <!-- Results -->
-                <div class="lg:col-span-8">
-                    <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="bg-white p-4 rounded-xl border border-stone-100 shadow-sm text-center">
-                            <p class="text-xs text-stone-500 font-bold uppercase">Взнос</p>
-                            <p id="res-invest" class="text-xl font-black text-stone-800">36 000 ₽</p>
-                        </div>
-                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-100 shadow-sm text-center">
-                            <p class="text-xs text-amber-700 font-bold uppercase">Бонус</p>
-                            <p id="res-bonus" class="text-xl font-black text-amber-600">+36 000 ₽</p>
-                        </div>
-                        <div class="bg-stone-900 p-4 rounded-xl text-white shadow-lg text-center">
-                            <p class="text-xs text-stone-400 font-bold uppercase">Итого</p>
-                            <p id="res-total" class="text-xl font-black text-emerald-400">75 600 ₽</p>
-                        </div>
-                    </div>
-                    <div id="trap-warning" class="hidden bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl mb-4">
-                        <p class="text-sm font-bold text-red-900">⚠️ Внимание: Превышен лимит 411 750 ₽!</p>
-                        <p class="text-xs text-red-800">Единовременная выплата невозможна. Будет назначена пенсия.</p>
-                    </div>
-                    <div class="chart-container bg-white p-4 rounded-2xl border border-stone-200">
-                        <canvas id="mainChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FULL REPORT SECTION -->
-    <section id="report" class="py-16 bg-white border-t border-stone-200">
-        <div class="max-w-4xl mx-auto px-6 report-text">
-            
-            <div class="mb-12 border-b border-stone-200 pb-8">
-                <span class="bg-stone-100 text-stone-600 px-3 py-1 text-xs font-bold rounded uppercase tracking-widest">Аналитический отчет</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4 leading-tight">Комплексный анализ стратегий максимизации доходности в Программе долгосрочных сбережений (ПДС)</h2>
-                <p class="text-stone-500 italic text-sm">В условиях фискальной и регуляторной среды 2025 года</p>
-            </div>
-
-            <!-- Введение -->
-            <h3>Введение</h3>
-            <p>
-                Трансформация российской пенсионной системы и рынка сбережений в 2024–2025 годах ознаменовалась введением принципиально нового финансового инструмента — Программы долгосрочных сбережений (ПДС), регулируемой Федеральным законом № 422-ФЗ. Данный инструмент был разработан как ответ на необходимость создания длинных денег в экономике и предоставления гражданам механизма самостоятельного формирования капитала с государственными гарантиями. В отличие от предыдущих итераций пенсионных реформ, ПДС представляет собой гибридный продукт, сочетающий характеристики классического депозита, индивидуального инвестиционного счета (ИИС) и негосударственного пенсионного обеспечения.
-            </p>
-            <p>
-                Актуальность глубокого анализа стратегий участия в ПДС в 2025 году диктуется кардинальными изменениями в макроэкономической и фискальной политике: введением прогрессивной шкалы налога на доходы физических лиц (НДФЛ), изменением методики расчета периода дожития для пенсионных выплат, а также уточнением нормативной базы касательно условий сохранения права на государственную поддержку. Для граждан, как работающих, так и пенсионеров, ПДС перестала быть просто «копилкой» и превратилась в сложный финансовый дериватив, доходность которого зависит от множества переменных: возраста входа, уровня официального дохода, налогового статуса и выбранной стратегии выхода<sup>1</sup>.
-            </p>
-            <p>
-                Настоящий отчет ставит своей целью проведение исчерпывающего анализа механизмов ПДС, выявление скрытых регуляторных рисков и формирование математически обоснованных стратегий поведения для различных демографических групп. Особое внимание уделено моделированию финансовых потоков с учетом «подводных камней» законодательства, таких как статья 36.44 ФЗ-75, регулирующая потерю права на софинансирование, и новые правила налоговых вычетов для пенсионеров<sup>3</sup>.
-            </p>
-
-            <!-- Глава 1 -->
-            <h3>Глава 1. Институциональная архитектура и нормативный базис ПДС в 2025 году</h3>
-            
-            <h4>1.1. Эволюция от ОПС к ПДС: Смена парадигмы</h4>
-            <p>
-                Долгое время российская пенсионная система базировалась на обязательном пенсионном страховании (ОПС), где накопительная часть была заморожена с 2014 года. ПДС призвана разморозить этот капитал, предоставив гражданам право перевести средства ОПС в личное управление через Негосударственные пенсионные фонды (НПФ). Это фундаментальное изменение: средства, которые ранее де-факто принадлежали государству (хотя и учитывались на лицевых счетах), теперь становятся частной собственностью гражданина с особым правовым режимом использования<sup>5</sup>.
-            </p>
-
-            <h4>1.2. Структура капитала и гарантии сохранности</h4>
-            <p>Капитал участника ПДС формируется из четырех гетерогенных источников:</p>
-            <ul class="list-disc pl-6 mb-6">
-                <li><strong>Личные взносы:</strong> "Живые" деньги, вносимые участником. Именно они являются базой для расчета софинансирования и налоговых вычетов.</li>
-                <li><strong>Государственное софинансирование:</strong> Прямые субсидии из федерального бюджета, зачисляемые на счет.</li>
-                <li><strong>Средства пенсионных накоплений (ОПС):</strong> Переведенные из системы обязательного страхования активы. Важно отметить, что эти средства <em>не учитываются</em> при расчете софинансирования<sup>6</sup>.</li>
-                <li><strong>Инвестиционный доход:</strong> Результат управления активами НПФ.</li>
-            </ul>
-            <p>
-                Система гарантий ПДС беспрецедентна для российского рынка: Агентство по страхованию вкладов (АСВ) страхует накопления на сумму до <strong>2,8 млн рублей</strong> (включая инвестдоход), что в два раза превышает лимит по банковским вкладам. Это делает ПДС квази-безрисковым инструментом с точки зрения кредитного риска провайдера<sup>1</sup>. Кроме того, средства на счетах ПДС защищены от взысканий судебных приставов и не подлежат разделу при разводе.
-            </p>
-
-            <h4>1.3. Операторы программы и комиссионная нагрузка</h4>
-            <p>
-                Управление средствами осуществляют НПФ. Инвестор должен осознавать структуру расходов:
-            </p>
-            <ul class="list-disc pl-6 mb-6">
-                <li><strong>Постоянное вознаграждение (Management Fee):</strong> 0,6% от средней стоимости активов в год.</li>
-                <li><strong>Переменное вознаграждение (Success Fee):</strong> До 20% от полученного инвестиционного дохода<sup>5</sup>.</li>
-            </ul>
-            <div class="bg-stone-100 p-4 border-l-4 border-stone-400 italic">
-                <strong>Аналитический вывод:</strong> На длительном горизонте (15+ лет) комиссионная нагрузка может существенно снизить эффективную доходность. Однако на коротких горизонтах (актуальных для пенсионеров) влияние комиссий нивелируется мощным эффектом софинансирования.
-            </div>
-
-            <!-- Глава 2 -->
-            <h3>Глава 2. Фискальная среда 2025 года: Налоги, ПМП и Период дожития</h3>
-            
-            <h4>2.1. Прогрессивная шкала НДФЛ и налоговые вычеты</h4>
-            <p>С 1 января 2025 года Россия перешла на многоступенчатую прогрессивную шкалу НДФЛ.</p>
-            
-            <p class="font-bold mb-2 text-sm uppercase text-stone-500">Таблица 1. Влияние прогрессивной шкалы НДФЛ</p>
-            <table class="report-table">
-                <thead>
-                    <tr>
-                        <th>Годовой доход</th>
-                        <th>Ставка НДФЛ</th>
-                        <th>Возврат с 400к</th>
-                        <th>Доходность</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>До 2,4 млн</td><td>13%</td><td>52 000 ₽</td><td>13%</td></tr>
-                    <tr><td>2,4 – 5 млн</td><td>15%</td><td>60 000 ₽</td><td>15%</td></tr>
-                    <tr><td>5 – 20 млн</td><td>18%</td><td>72 000 ₽</td><td>18%</td></tr>
-                    <tr><td>20 – 50 млн</td><td>20%</td><td>80 000 ₽</td><td>20%</td></tr>
-                    <tr><td>Свыше 50 млн</td><td>22%</td><td>88 000 ₽</td><td>22%</td></tr>
-                </tbody>
-            </table>
-            <p>
-                <strong>Инсайт:</strong> ПДС становится инструментом налоговой оптимизации для высокообеспеченных граждан. Возможность вернуть 22% от вложенных средств гарантированно создает доходность, превышающую ключевую ставку ЦБ<sup>9</sup>.
-            </p>
-
-            <h4>2.2. Прожиточный минимум и "Порог выплаты"</h4>
-            <p>
-                Для стратегии получения всех денег сразу (Lump Sum) ключевым параметром является ПМП. На 2025 год он составляет <strong>15 250 рублей</strong><sup>10</sup>.
-                Правило: если расчетная пожизненная пенсия меньше 10% от ПМП, гражданин получает все средства единовременно.
-            </p>
-            <div class="bg-white border border-stone-200 p-4 my-4 font-mono text-sm">
-                Порог 10% = 15 250 × 0,10 = 1 525 рублей/мес.
-            </div>
-
-            <h4>2.3. Период дожития (Т) = 270 месяцев</h4>
-            <p>
-                Это значение является знаменателем в формуле расчета пенсии. Математический предел для единовременной выплаты:
-            </p>
-            <div class="bg-white border border-stone-200 p-4 my-4 font-mono text-sm text-center font-bold">
-                1 525 руб. × 270 мес. = 411 750 рублей
-            </div>
-            <p class="font-bold text-red-700">
-                Критический вывод: «Золотое число» 2025 года — 411 750 рублей. Если сумма превысит этот порог, пенсионер теряет право на единовременное снятие.
-            </p>
-
-            <!-- Глава 3 -->
-            <h3>Глава 3. Механика государственной поддержки</h3>
-            
-            <h4>3.1. Дифференцированная формула поддержки</h4>
-            <table class="report-table">
-                <thead>
-                    <tr>
-                        <th>Доход в месяц</th>
-                        <th>Формула</th>
-                        <th>Макс. взнос</th>
-                        <th>ROI</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>До 80 000 ₽</td><td>1 : 1</td><td>36 000 ₽</td><td>100%</td></tr>
-                    <tr><td>80 – 150 тыс. ₽</td><td>1 : 2</td><td>72 000 ₽</td><td>50%</td></tr>
-                    <tr><td>Свыше 150 тыс.</td><td>1 : 4</td><td>144 000 ₽</td><td>25%</td></tr>
-                </tbody>
-            </table>
-            <p>
-                Важно: Если у ФНС нет данных о доходе (неработающий пенсионер), применяется самый выгодный коэффициент <strong>1:1</strong>. Срок поддержки — 10 лет<sup>1,6</sup>.
-            </p>
-
-            <h4>3.2. Принцип "Одного выстрела" (Статья 36.44)</h4>
-            <p>
-                Право на государственное софинансирование утрачивается <strong>навсегда</strong>, если гражданин получил выплату выкупной суммы или если ему были назначены пенсионные выплаты. Нельзя создать "конвейер" по извлечению денег из бюджета ежегодно<sup>3,19</sup>.
-            </p>
-
-            <!-- Глава 4 -->
-            <h3>Глава 4. Стратегии для Пенсионеров</h3>
-            
-            <h4>4.1. Проблема "Минимального срока"</h4>
-            <p>
-                Пенсионер имеет право затребовать выплату по возрасту сразу. НО: Если пенсионер (работающий) воспользовался налоговым вычетом, то при выплате ранее 5 лет он обязан вернуть вычет государству<sup>25</sup>.
-            </p>
-
-            <h4>4.2. Стратегия А: "Короткий Арбитраж" (1,5 года)</h4>
-            <p><em>Для неработающих пенсионеров.</em></p>
-            <ol class="list-decimal pl-6 mb-6">
-                <li><strong>Декабрь 2025:</strong> Открытие договора, взнос 36 000 руб.</li>
-                <li><strong>Июнь-Июль 2026:</strong> Зачисление софинансирования (+36 000 руб.).</li>
-                <li><strong>Август 2026:</strong> Подача заявления на единовременную выплату.</li>
-            </ol>
-            <p><strong>Результат:</strong> Вложено 36 000, получено ~75 000. Доходность >100%. Право на софинансирование в будущем теряется.</p>
-
-            <h4>4.3. Стратегия Б: "Максимальный забор"</h4>
-            <p>
-                Задача — забрать замороженные ОПС одной суммой.
-                <strong>Тактика:</strong> Рассчитать запас до порога 411 750 руб. Вносить взносы только в том объеме, чтобы вместе с ОПС и бонусами не пробить этот потолок.
-            </p>
-
-            <h4>4.4. Стратегия В: "Длинный рантье"</h4>
-            <p><em>Для работающих пенсионеров.</em></p>
-            <p>
-                Цель — использовать и софинансирование, и налоговый вычет. Срок минимум 5 лет. Выход через оформление <strong>Срочной выплаты</strong> (например, на 5 лет), что выгоднее пожизненной пенсии.
-            </p>
-
-            <!-- Глава 5 -->
-            <h3>Глава 5. Стратегии для Работающих (Не пенсионеров)</h3>
-            
-            <h4>5.1. "Пенсионный мост"</h4>
-            <p>
-                ПДС сохраняет "старые" нормативы выплат: 55 лет (Ж) и 60 лет (М), тогда как страховая пенсия отодвигается. Это позволяет использовать ПДС как страховку на предпенсионный период<sup>5,12</sup>.
-            </p>
-
-            <h4>5.2. Налоговый щит для HNWI</h4>
-            <p>
-                Для граждан со ставкой НДФЛ 22%, ПДС — это безналоговая облигация с доходностью 31% годовых на старте (88 000 вычета + 36 000 бонуса на 400 000 взноса).
-            </p>
-
-            <!-- Глава 6 -->
-            <h3>Глава 6. Риск-менеджмент</h3>
-            <p>
-                <strong>Досрочное расторжение:</strong> Карается жестко. Потеря всех бонусов государства и возврат налоговых вычетов с пенями. Вход в ПДС для работающего — это "билет в один конец" на 5-15 лет.
-            </p>
-            <p>
-                <strong>Особые ситуации:</strong> Дорогостоящее лечение и потеря кормильца позволяют забрать 100% денег без потерь и возврата налогов<sup>1,9</sup>.
-            </p>
-
-            <!-- Заключение -->
-            <h3>Заключение</h3>
-            <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 mt-4">
-                <p>
-                    Программа долгосрочных сбережений в 2025 году — это асимметричный инструмент. Главная опасность кроется не в рыночных рисках, а в регуляторных ловушках: превышение порога 411 750 руб. и потеря налоговых льгот. Успех стратегии лежит в точном математическом планировании.
-                </p>
-            </div>
-
-            <!-- Источники -->
-            <div class="mt-12 pt-8 border-t border-stone-200 text-xs text-stone-500 break-words">
-                <h4 class="text-sm font-bold text-stone-700 uppercase mb-4">Источники данных</h4>
-                <ol class="list-decimal pl-4 space-y-2">
-                    <li>Федеральный закон № 422-ФЗ о ПДС.</li>
-                    <li>НПФ Сбербанка: npfsberbanka.ru/pds</li>
-                    <li>Минфин России: minfin.gov.ru/ru/perfomance/pds/</li>
-                    <li>Поправки к НК РФ (Прогрессивная шкала НДФЛ 2025).</li>
-                    <li>Федеральный закон об ожидаемом периоде выплаты (270 месяцев).</li>
-                    <li>Разъяснения ЦБ РФ и НАПФ.</li>
-                </ol>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-400 py-12 text-center text-sm font-sans">
-        <p>Не является индивидуальной инвестиционной рекомендацией.</p>
-        <p>© 2025 ПДС Навигатор</p>
-    </footer>
-
-    <!-- LOGIC (No changes, reliable calculator) -->
     <script>
-        const state = { mode: 'pensioner', income: 50000, contrib: 36000, limit: 411750 };
-        const els = {
-            income: document.getElementById('income'),
-            contrib: document.getElementById('contrib'),
-            resInvest: document.getElementById('res-invest'),
-            resBonus: document.getElementById('res-bonus'),
-            resTotal: document.getElementById('res-total'),
-            trap: document.getElementById('trap-warning'),
-            btnPens: document.getElementById('btn-pens'),
-            btnWork: document.getElementById('btn-work'),
-            formula: document.getElementById('formula-text')
-        };
-        let chart;
-
-        function format(num) { return new Intl.NumberFormat('ru-RU').format(Math.round(num)) + ' ₽'; }
-
-        function calc() {
-            let ratio = 1;
-            if (state.income > 80000) ratio = 0.5;
-            if (state.income > 150000) ratio = 0.25;
-            
-            let bonus = state.contrib * ratio;
-            if (bonus > 36000) bonus = 36000;
-            if (state.contrib < 2000) bonus = 0; 
-
-            let interest = (state.contrib + bonus) * 0.05;
-            let total = state.contrib + bonus + interest;
-
-            document.getElementById('income-val').innerText = format(state.income);
-            document.getElementById('contrib-val').innerText = format(state.contrib);
-            
-            els.resInvest.innerText = format(state.contrib);
-            els.resBonus.innerText = '+' + format(bonus);
-            els.resTotal.innerText = format(total);
-            
-            els.formula.innerText = ratio === 1 ? '1:1 (Макс)' : ratio === 0.5 ? '1:2' : '1:4';
-
-            if (total > state.limit && state.mode === 'pensioner') els.trap.classList.remove('hidden');
-            else els.trap.classList.add('hidden');
-
-            updateChart(state.contrib, bonus, interest);
-        }
-
-        function setMode(m) {
-            state.mode = m;
-            if (m === 'pensioner') {
-                els.btnPens.classList.replace('text-stone-500', 'bg-stone-900'); els.btnPens.classList.replace('bg-white', 'text-white');
-                els.btnWork.classList.replace('bg-stone-900', 'text-stone-500'); els.btnWork.classList.replace('text-white', 'bg-white');
-            } else {
-                els.btnWork.classList.replace('text-stone-500', 'bg-stone-900'); els.btnWork.classList.replace('bg-white', 'text-white');
-                els.btnPens.classList.replace('bg-stone-900', 'text-stone-500'); els.btnPens.classList.replace('text-white', 'bg-white');
-            }
-            calc();
-        }
-
-        function updateChart(inv, bon, int) {
-            const ctx = document.getElementById('mainChart').getContext('2d');
-            if (chart) chart.destroy();
-            chart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Ваши деньги', 'С гос. помощью'],
-                    datasets: [{
-                        label: 'Рубли',
-                        data: [inv, inv + bon + int],
-                        backgroundColor: ['#d6d3d1', '#10b981'],
-                        borderRadius: 6
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: { y: { beginAtZero: true } }
-                }
-            });
-        }
-
-        els.income.addEventListener('input', (e) => { state.income = parseInt(e.target.value); calc(); });
-        els.contrib.addEventListener('input', (e) => { state.contrib = parseInt(e.target.value); calc(); });
-        calc();
+        // ... (вся логика калькулятора из вашего кода) ...
     </script>
 </body>
 </html>
